@@ -42,9 +42,9 @@ Xft.dpi: 96
 
 ! fonts
 ! run "fc-list" for a list of available fonts
-URxvt*font: xft:Monospace:style=Regular:pixelsize=12
-URxvt*fontn: xft:Monospace:style=Italic:pixelsize=12
-URxvt*boldFont: xft:Monospace:style=Bold:pixelsize=12
+URxvt*font: xft:Deja Vu Sans Mono:style=Regular:pixelsize=12
+URxvt*fontn: xft:Deja Vu Sans Mono:style=Italic:pixelsize=12
+URxvt*boldFont: xft:Deja Vu Sans Mono:style=Bold:pixelsize=12
 
 URxvt*scrollBar: False
 URxvt*scrollTtyOutput: False
@@ -52,7 +52,7 @@ URxvt*scrollTtyKeypress: True
 URxvt*secondaryScroll: True
 URxvt*saveLines: 8000
 
-URxvt*letterSpace: -1
+!URxvt*letterSpace: +1
 
 !Clickable links
 URxvt.perl-ext-common : default,matcher

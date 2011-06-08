@@ -1,1 +1,5 @@
-sync
+xmonad-i386-linux
+xmonad.errors
+xmonad.hs.ant
+xmonad.o
+xmonad.hi
