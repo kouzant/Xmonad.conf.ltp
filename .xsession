@@ -20,7 +20,7 @@ if [ -x /home/antonis/.xmobarVolFifo ] ; then
 fi
 mkfifo /home/antonis/.xmobarVolFifo &
 vol=$(amixer -c 0 get Master | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "MM" } else { print $2 }}' | head -n 1)
-echo Vol: $vol > /home/antonis/.xmobarVolFifo &
+echo "<fc=#e3170d>Vol:</fc> $vol" > /home/antonis/.xmobarVolFifo &
 
 #Set Wallpaper
 feh --bg-fill ~/wallpapers/debian_0.jpg &
