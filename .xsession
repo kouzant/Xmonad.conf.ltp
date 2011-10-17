@@ -30,5 +30,7 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 
 #Fire up apps
 xscreensaver -no-splash &
+synclient VertEdgeScroll="1"
+synclient TapButton1="1"
 
 exec xmonad
