@@ -56,7 +56,7 @@ URxvt*saveLines: 8000
 
 !Clickable links
 URxvt.perl-ext-common : default,matcher
-URxvt.urlLauncher     : iceweasel
+URxvt.urlLauncher     : firefox
 URxvt.matcher.button  : 1
 
 URxvt.depth: 32

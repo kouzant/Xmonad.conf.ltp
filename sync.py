@@ -7,7 +7,7 @@ if __name__=="__main__":
     #Home Directory
     home=os.getenv("HOME")
     #Repository name
-    repo=home+"/xmonad.conf.ltp/"
+    repo=home+"/Xmonad.conf.ltp/"
     #Directories to copy
     #SOURCE:TARGET
     dirs={home+"/.xmonad/":".xmonad/",

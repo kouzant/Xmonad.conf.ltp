@@ -1,20 +1,20 @@
-Config { font = "xft:Fixed-8"
+Config { font = "xft:DejaVu Sans Mono-8"
       , bgColor = "#6B6B6B"
       , fgColor = "#ffffff"
 	  , position = TopW L 90
       , lowerOnStart = True
 --      , commands = [Run Cpu ["-t", "<fc=#e3170d>Cpu</fc>: <total>", "-L","3","-H","50","--normal","#859900","--high","#FFB6B0"] 10
-      , commands = [Run MultiCpu ["-t","<fc=#e3170d>Cpu:</fc> <total0><total1>","-L","3","-H","50","--normal","#859900","--high","#FFB6B0","-w","5"] 10
+      , commands = [Run MultiCpu ["-t","<fc=#e3170d>Cpu:</fc> <total0><total1>","-L","3","-H","50","--normal","#859900","--high","#FFB6B0","-w","3"] 10
                    , Run Memory ["-t","<fc=#e3170d>Mem</fc>: <usedratio>%"] 10
-				   , Run Battery ["-t", "<fc=#e3170d>Batt</fc>: <left>", "-L", "20", "-H", "50", "--high", "gray", "--normal", "yellow", "--low", "red"] 10
                    , Run Date "%a %b %_d %H:%M" "date" 10
                    , Run Weather "LGAV" ["-t","<tempC>C","-L","64","-H","77"    ,"--normal","green","--high","red","--low","lightblue"] 3600
                    , Run PipeReader "/home/antonis/.xmobarVolFifo" "vol"
+                   , Run Com "mpc" ["current"] "mpc" 10
                    , Run StdinReader
                    ]
 
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "<fc=#e3170d>%StdinReader%</fc> }{ %vol% | %multicpu%  %memory%  %battery%  <fc=#e3170d>%date%</fc> | %LGAV%"
+      , template = "<fc=#e3170d>%StdinReader%</fc> } <fc=#e77300>%mpc%</fc> { %vol% | %multicpu%  %memory% .:. %date% | %LGAV%"
       }
 

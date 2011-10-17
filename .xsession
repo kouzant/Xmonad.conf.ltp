@@ -5,11 +5,8 @@ xrdb -merge .Xresources
 #Composite manager
 xcompmgr -c &
 
-#enable TapButton
-synclient TapButton1=1
-
 #keyboard options
-setxkbmap -model pc105 -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle &
+setxkbmap -model pc105 -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle,grp_led:scroll &
 
 #cursor
 xsetroot -cursor_name left_ptr &
@@ -33,14 +30,5 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 
 #Fire up apps
 xscreensaver -no-splash &
-
-if [ -x /usr/bin/nm-applet ] ; then
-    nm-applet --sm-display &
-fi
-
-if [ -x /usr/bin/gnome-power-manager ]; then
-    sleep 3
-    gnome-power-manager
-fi
 
 exec xmonad
