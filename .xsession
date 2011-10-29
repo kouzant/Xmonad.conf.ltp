@@ -19,6 +19,8 @@ mkfifo /home/antonis/.xmobarVolFifo &
 vol=$(amixer -c 0 get Master | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "MM" } else { print $2 }}' | head -n 1)
 echo "<fc=#e3170d>Vol:</fc> $vol" > /home/antonis/.xmobarVolFifo &
 
+sleep 0.5
+
 #Set Wallpaper
 feh --bg-fill ~/wallpapers/debian_0.jpg &
 
@@ -32,5 +34,8 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 xscreensaver -no-splash &
 synclient VertEdgeScroll="1"
 synclient TapButton1="1"
+
+#Add ssh key to keyring
+ssh-add
 
 exec xmonad

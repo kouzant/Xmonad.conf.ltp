@@ -76,8 +76,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- launch a terminal
     [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
-	-- launch firefox
-    , ((modMask,                 xK_i     ), spawn "firefox")
+	-- launch chromium
+    , ((modMask,                 xK_i     ), spawn "iceweasel")
 
     -- take screenshot of the screen
     , ((0, xK_Print), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
@@ -261,8 +261,7 @@ myManageHook = composeAll
     , className =? "testing-SwingText"  --> doFloat
     , className =? "gui-SwingMain"    --> doFloat
     , className =? "gui-WaitQueueGUI"  --> doFloat
-    , className =? "Firefox"      --> doShift "2"
-    , className =? "chromium-browser" --> doShift "2"
+    , className =? "Iceweasel"      --> doShift "2"
     , className =? "Pidgin"         --> doShift "3"
     , className =? "Skype"         --> doShift "3"
     , className =? "Kopete"         --> doShift "3"
