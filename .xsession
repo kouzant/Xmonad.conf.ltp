@@ -35,7 +35,4 @@ xscreensaver -no-splash &
 synclient VertEdgeScroll="1"
 synclient TapButton1="1"
 
-#Add ssh key to keyring
-ssh-add
-
 exec xmonad
