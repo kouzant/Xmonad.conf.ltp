@@ -6,7 +6,7 @@ xrdb -merge .Xresources
 xcompmgr -c &
 
 #keyboard options
-setxkbmap -model pc105 -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle,grp_led:scroll &
+setxkbmap -model acer_laptop -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle,grp_led:num &
 
 #cursor
 xsetroot -cursor_name left_ptr &
@@ -22,7 +22,7 @@ echo "<fc=#e3170d>Vol:</fc> $vol" > /home/antonis/.xmobarVolFifo &
 sleep 0.5
 
 #Set Wallpaper
-feh --bg-fill ~/wallpapers/debian_0.jpg &
+feh --bg-fill ~/wallpapers/death_star.jpg &
 
 #urvtd deamon
 urxvtd -q -o -f &

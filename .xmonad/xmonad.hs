@@ -77,7 +77,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
 	-- launch chromium
-    , ((modMask,                 xK_i     ), spawn "iceweasel")
+    , ((modMask,                 xK_i     ), spawn "chromium")
 
     -- take screenshot of the screen
     , ((0, xK_Print), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
@@ -254,18 +254,17 @@ myManageHook = composeAll
     , resource  =? "compose"        --> doFloat
 	, resource  =? "pyGust.py"		--> doFloat
 	, isFullscreen					--> doFullFloat
-    , className =? "Eclipse"        --> doFloat
     , className =? "business-Draw"  --> doFloat
     , className =? "java-lang-Thread"--> doFloat
     , className =? "business-Main"  --> doFloat
     , className =? "testing-SwingText"  --> doFloat
     , className =? "gui-SwingMain"    --> doFloat
     , className =? "gui-WaitQueueGUI"  --> doFloat
-    , className =? "Iceweasel"      --> doShift "2"
+    , className =? "Chromium"      --> doShift "2"
     , className =? "Pidgin"         --> doShift "3"
     , className =? "Skype"         --> doShift "3"
     , className =? "Kopete"         --> doShift "3"
-    , className =? "Amarok"         --> doShift "4"
+    , className =? "Eclipse"         --> doShift "4"
     , className =? "Wine"           --> doShift "4"
     , className =? "VirtualBox"     --> doShift "5"
     , className =? "Ktorrent"       --> doShift "5"
