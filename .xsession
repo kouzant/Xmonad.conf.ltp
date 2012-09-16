@@ -6,7 +6,7 @@ xrdb -merge .Xresources
 xcompmgr -c &
 
 #keyboard options
-setxkbmap -model acer_laptop -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle,grp_led:num &
+setxkbmap -model pc105 -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle,grp_led:scroll &
 
 #cursor
 xsetroot -cursor_name left_ptr &
