@@ -22,17 +22,24 @@ echo "<fc=#e3170d>Vol:</fc> $vol" > /home/antonis/.xmobarVolFifo &
 sleep 0.5
 
 #Set Wallpaper
-feh --bg-fill ~/wallpapers/death_star.jpg &
+feh --bg-fill ~/wallpapers/debian_0.jpg &
 
 #urvtd deamon
 urxvtd -q -o -f &
 
 #Set up an icon tray
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 10 --transparent true --tint 0xededed --height 14 &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 3 --transparent true --tint 0xededed --height 15 &
 
 #Fire up apps
 xscreensaver -no-splash &
-synclient VertEdgeScroll="1"
-synclient TapButton1="1"
+synclient VertEdgeScroll=1
+synclient TapButton1=1
+synclient TapButton2=2
+synclient TapButton3=3
+synclient HorizEdgeScroll=1
+synclient HorizTwoFingerScroll=1
+
+#lock current tty
 
 exec xmonad
+exec vlock

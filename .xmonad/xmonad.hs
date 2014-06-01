@@ -77,7 +77,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
 	-- launch firefox
-    , ((modMask,                 xK_i     ), spawn "firefox")
+    , ((modMask,                 xK_i     ), spawn "google-chrome")
 
     -- take screenshot of the screen
     , ((0, xK_Print), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
@@ -159,6 +159,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 	, ((0, 0x1008ff11), spawn "sh ~/scripts/xmobar/volumeDown")
     --XF86AudioPlay
     , ((0, 0x1008ff14), spawn "mpc toggle")
+    --XF86Battery
+    , ((0, 0x1008ff93), spawn "sh ~/scripts/battery")
     ]
     ++
  
@@ -250,7 +252,7 @@ myManageHook = composeAll
     , className =? "Wow.exe"        --> doFloat
     , className =? "Wine"           --> doFloat
     , className =? "kmix"           --> doFloat
-    , className =? "xmessage"       --> doFloat
+    , className =? "Xmessage"       --> doFloat
     , resource  =? "compose"        --> doFloat
 	, resource  =? "pyGust.py"		--> doFloat
 	, isFullscreen					--> doFullFloat
@@ -260,7 +262,7 @@ myManageHook = composeAll
     , className =? "testing-SwingText"  --> doFloat
     , className =? "gui-SwingMain"    --> doFloat
     , className =? "gui-WaitQueueGUI"  --> doFloat
-    , className =? "Firefox"      --> doShift "2"
+    , className =? "Google-chrome"      --> doShift "2"
     , className =? "Pidgin"         --> doShift "3"
     , className =? "Skype"         --> doShift "3"
     , className =? "Kopete"         --> doShift "3"
