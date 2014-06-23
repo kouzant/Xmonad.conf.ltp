@@ -15,7 +15,8 @@ if __name__=="__main__":
     #Files to copy    
     files=(home+"/.Xdefaults",
             home+"/.xmobarrc",
-            home+"/.xsession")
+            home+"/.xsession",
+            home+"/scripts/battery")
 
     #First copy the directories
     for dir,name in dirs.items():

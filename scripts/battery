@@ -1,0 +1,5 @@
+#!/bin/bash
+
+acpi -bai > /tmp/.battery;
+xmessage -center -timeout 5 -file /tmp/.battery;
+rm -f /tmp/.battery

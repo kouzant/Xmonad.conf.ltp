@@ -29,7 +29,7 @@ urxvtd -q -o -f &
 
 #Set up an icon tray
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 3 --transparent true --tint 0xededed --height 15 &
-
+#stalonetray -i 16 --window-type normal --geometry 1x1+0-0 --window-strut none --background black --icon-gravity NE &
 #Fire up apps
 xscreensaver -no-splash &
 synclient VertEdgeScroll=1
