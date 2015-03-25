@@ -11,8 +11,8 @@ Config { font = "xft:DejaVu Sans Mono-8"
                         "-l", "red", "-n", "orange", "-h", "green",
                         "--", "-f", "ADP0/online", "-O", "<fc=green>On</fc>",
                         "-i", "", "-o", "<fc=grey>Off</fc>"] 10
-                   , Run Kbd [("us", "US"), ("gr(extended)", "EL")]
-                   , Run Weather "LGAV" ["-t","<tempC>C","-L","64","-H","77"    ,"--normal","green","--high","red","--low","lightblue"] 3600
+                   , Run Kbd [("us", "US"), ("gr(extended)", "EL"), ("se", "SE")]
+                   , Run Weather "ESSB" ["-t","<tempC>C","-L","64","-H","77"    ,"--normal","green","--high","red","--low","lightblue"] 3600
                    , Run PipeReader "/home/antonis/.xmobarVolFifo" "vol"
                    , Run Com "mpc" ["current"] "mpc" 10
                    , Run StdinReader
@@ -20,6 +20,6 @@ Config { font = "xft:DejaVu Sans Mono-8"
 
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "<fc=#e3170d>%StdinReader%</fc> } <fc=#e77300>%mpc%</fc> {%vol% {%kbd%} | %multicpu%  %memory% %battery% .:. %date% | %LGAV%"
+      , template = "<fc=#e3170d>%StdinReader%</fc> } <fc=#e77300>%mpc%</fc> {%vol% {%kbd%} | %multicpu%  %memory% %battery% .:. %date% | %ESSB%"
       }
 

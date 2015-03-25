@@ -6,7 +6,7 @@ xrdb -merge .Xresources
 xcompmgr -c &
 
 #keyboard options
-setxkbmap -model pc105 -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle,grp_led:scroll &
+setxkbmap -model dell -layout us,gr -variant ,extended -option terminate:ctrl_alt_bksp,grp:alt_shift_toggle &
 
 #cursor
 xsetroot -cursor_name left_ptr &
@@ -28,7 +28,8 @@ feh --bg-fill ~/wallpapers/debian_0.jpg &
 urxvtd -q -o -f &
 
 #Set up an icon tray
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 3 --transparent true --tint 0xededed --height 15 &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+--expand true --width 3 --transparent true --tint 0xededed --height 15 &
 #stalonetray -i 16 --window-type normal --geometry 1x1+0-0 --window-strut none --background black --icon-gravity NE &
 #Fire up apps
 xscreensaver -no-splash &

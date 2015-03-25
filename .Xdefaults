@@ -34,15 +34,18 @@ URxvt.fading: 50%
 URxvt*foreground:White
 URxvt*background: rgba:0000/0000/0000/5555
 
-Xft.antialias: true
-Xft.hinting:true
-xft.rgba: rgb
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
-Xft.dpi: 96
+Xft.hinting: 1
+Xft.antialias: 1
+xft.rgba: rgb
+!Xft.dpi: 96
 
 ! fonts
 ! run "fc-list" for a list of available fonts
-URxvt*font: xft:Deja Vu Sans Mono:style=Regular:pixelsize=12
+! URxvt*font: xft:Deja Vu Sans Mono:style=Regular:pixelsize=12
+URxvt*font: xft:Inconsolata:style=Medium:pixelsize=12
 URxvt*fontn: xft:Deja Vu Sans Mono:style=Italic:pixelsize=12
 URxvt*boldFont: xft:Deja Vu Sans Mono:style=Bold:pixelsize=12
 

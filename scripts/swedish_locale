@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SETXKBMAP=/usr/bin/setxkbmap
+LOC0="us,gr"
+LOC1="se"
+
+CUR_LOC=$(setxkbmap -query | grep layout | awk '{print $2}')
+if [ "$CUR_LOC" = $LOC0 ]; then
+	$SETXKBMAP -model dell -layout se -option terminate:ctrl_alt_bksp
+else
+	$SETXKBMAP -model dell -layout us,gr -variant ,extended -option \
+		terminate:ctrl_alt_bksp,grp:alt_shift_toggle
+fi

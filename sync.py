@@ -11,12 +11,11 @@ if __name__=="__main__":
     #Directories to copy
     #SOURCE:TARGET
     dirs={home+"/.xmonad/":".xmonad/",
-            home+"/scripts/xmobar/":"scripts/xmobar/"}
+            home+"/scripts/":"scripts/"}
     #Files to copy    
     files=(home+"/.Xdefaults",
             home+"/.xmobarrc",
-            home+"/.xsession",
-            home+"/scripts/battery")
+            home+"/.xsession")
 
     #First copy the directories
     for dir,name in dirs.items():

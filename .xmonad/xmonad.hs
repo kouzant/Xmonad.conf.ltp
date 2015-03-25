@@ -62,11 +62,11 @@ main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 myBar = "xmobar"
 -- Custom PP
 myPP = xmobarPP {
-    ppCurrent = xmobarColor "#e3170d" "" . wrap "<" ">"
+    ppCurrent = xmobarColor "green" "" . wrap "<" ">"
     , ppHidden = xmobarColor "#C98F0A" ""
     , ppUrgent = xmobarColor "#FFFFAF" "" . wrap "[" "]" 
-    , ppLayout = xmobarColor "#ffffff" ""
-    , ppTitle =  xmobarColor "#C9A34E" "" . shorten 80
+    , ppLayout = xmobarColor "#ffffff" "" . shorten 8
+    , ppTitle =  xmobarColor "#C9A34E" "" . shorten 70
     , ppSep = xmobarColor "#429942" "" " | "
 }
 
@@ -243,6 +243,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. controlMask, xK_Up), withFocused (keysMoveWindow (0,-30)))
     -- move floated window 10 pixels down
     , ((modMask .|. controlMask, xK_Down), withFocused (keysMoveWindow (0,30)))
+    -- lock
+    , ((modMask .|. controlMask, xK_l), spawn "xscreensaver-command -lock")
 	--XF86AudioMute
 	, ((0, 0x1008ff12), spawn "sh ~/scripts/xmobar/volumeMute")
 	--XF86AudioRaiseVolume
@@ -253,6 +255,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((0, 0x1008ff14), spawn "mpc toggle")
     --XF86Battery
     , ((0, 0x1008ff93), spawn "sh ~/scripts/battery")
+	--Switch to swedish layout and back to normal
+    , ((modMask .|. controlMask, xK_z), spawn "sh ~/scripts/swedish_locale")
     ]
     ++
     [ ((m .|. modMask, k), windows $ f i)
